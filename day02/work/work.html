@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Google Form</title>
+    </head>
+    <body>
+        <section class="google-form">
+            <header class="header">
+                <h1>나와 잘 맞는 회사는?</h1>
+                <p>
+                    가고 싶은 회사에 대한 호감도를 조사합니다. 아이고 의미 없다.
+                </p>
+            </header>
+            <form action="" method="get">
+                <fieldset>
+                    <legend>다음 문자중에 왠지 마음에 드는 것을 하나 고르세요</legend>
+
+                    <input type="radio" name="company" id="naver" value="naver" />
+                    <label for="company">네</label>
+
+                    <input type="radio" name="company" id="kakao" value="kakao" />
+                    <label for="company">카</label>
+
+                    <input type="radio" name="company" id="line" value="line" />
+                    <label for="company">라</label>
+
+                    <input type="radio" name="company" id="coupang" value="coupang" />
+                    <label for="company">쿠</label>
+
+                    <input type="radio" name="company" id="jeju-base-coding" value="jeju-base-coding" />
+                    <label for="company">베</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>친구와 문자를 합니다. 다음중 어떤 메신저를 이용하시겠습니까? 모두 골라주세요.</legend>
+                    <input
+                        type="checkbox"
+                        id="messenger"
+                        name="messenger"
+                        value="kakao"
+                    />
+                    <label for="messenger">카카오톡</label>
+
+                    <input
+                        type="checkbox"
+                        id="messenger"
+                        name="messenger"
+                        value="line"
+                    />
+                    <label for="messenger">라인</label>
+
+                    <input
+                        type="checkbox"
+                        id="messenger"
+                        name="messenger"
+                        value="instagram"
+                    />
+                    <label for="messenger">인스타그램 디엠</label>
+
+                    <input
+                        type="checkbox"
+                        id="messenger"
+                        name="messenger"
+                        value="nate-on"
+                    />
+                    <label for="messenger">네이트온</label>
+
+                    <input
+                        type="checkbox"
+                        id="messenger"
+                        name="messenger"
+                        value="kakao"
+                    />
+                    <label for="budy-budy">버디버디</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>면접에서 자신의 포부를 한 문장으로 얘기한다면?</ㅣ>
+                    <input type="text" placeholder="내 답변"/>
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        당신은 지금 한 기업의 최종면접을 앞두고 있습니다.
+                        면접장에 들어가기 직전, 자기 자신에게 해주고 싶은 말은?
+                    </legend>
+                    <input type="textarea" placeholder="내 답변"/>
+                </fieldset>
+
+                <fieldset>
+                    <legend>다음 중 기술 면접 때 듣고 싶은 질문이 아닌 것은?</legend>
+                    <label for="hate-question">
+                        
+                    </label>
+                    <select name="hate-question" id="hate-question">
+                        <option value="">선택</option>
+                        <option value="one">공백 기간 동안 뭐 했는지?</option>
+                        <option value="two">결혼 할 생각 있는지?</option>
+                        <option value="three">부모님은 뭐하시는지?</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>취업을 희망하는 날짜를 선택해주세요</legend>
+                    <label for="hope-date"
+                        ></label
+                    >
+                    <input type="date" />
+                </fieldset>
+
+                <fieldset>
+                    <legend>업무를 시작 하기에 가장 적당한 시간을 고르세요</legend>
+                    <label for="start-date"
+                        ></label
+                    >
+                    <input type="time" />
+                </fieldset>
+                <input type="submit" value="제출">
+            </form>
+        </section>
+    </body>
+</html>
