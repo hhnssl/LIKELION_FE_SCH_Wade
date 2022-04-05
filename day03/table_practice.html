@@ -1,0 +1,90 @@
+<!-- 하나의 table 안에는 thead와 tbody는 하나씩만~ -->
+<!-- scope을 넣어주는 것이 좋음!! 강사님 코드 참고해볼 것 -->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>2022 카타르 월드컵</title>
+
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid grey;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>
+                2022 카타르 월드컵
+                <p>본선 조추첨 결과</p>
+                <!-- 얘 caption 밖에 넣으면 아예 테이블 밖으로 빠져버림 table안에는 table관련 태그만 넣어야 돼서-->
+            </caption>
+
+            <tr>
+                <th>GROUP A</th>
+                <th>GROUP B</th>
+                <th>GROUP C</th>
+                <th>GROUP D</th>
+            </tr>
+            <tr>
+                <td>카타르</td>
+                <td>잉글랜드</td>
+                <td>아르헨티나</td>
+                <td>프랑스</td>
+            </tr>
+            <tr>
+                <td>에콰도르</td>
+                <td>이란</td>
+                <td>사우디아라비아</td>
+                <td>대륙 PO-1</td>
+            </tr>
+            <tr>
+                <td>세네갈</td>
+                <td>미국</td>
+                <td>멕시코</td>
+                <td>덴마크</td>
+            </tr>
+            <tr>
+                <td>네덜란드</td>
+                <td>유럽 PO</td>
+                <td>폴란드</td>
+                <td>튀니지</td>
+            </tr>
+
+            <tr>
+                <th>GROUP E</th>
+                <th>GROUP F</th>
+                <th>GROUP G</th>
+                <th>GROUP H</th>
+            </tr>
+            <tr>
+                <td>스페인</td>
+                <td>벨기에</td>
+                <td>브라질</td>
+                <td>포르투갈</td>
+            </tr>
+            <tr>
+                <td>대륙 PO-2</td>
+                <td>캐나다</td>
+                <td>세르비아</td>
+                <td>가나</td>
+            </tr>
+            <tr>
+                <td>독일</td>
+                <td>모로코</td>
+                <td>스위스</td>
+                <td>우루과이</td>
+            </tr>
+            <tr>
+                <td>일본</td>
+                <td>크로아티아</td>
+                <td>카메룬</td>
+                <td>대한민국</td>
+            </tr>
+        </table>
+    </body>
+</html>
