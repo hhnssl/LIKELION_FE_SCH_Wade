@@ -7,7 +7,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>3일차 과제 - 달력 만들기</title>
-        <link rel="stylesheet" href="work-css.css" />
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid grey;
+            }
+
+            .SUN {
+                color: blue;
+                background-color: red;
+            }
+        </style>
     </head>
     <body>
         <section>
@@ -25,6 +36,16 @@
                     <th></th>
                     <th colspan="7">3</th>
                 </tr>
+                <colgroup>
+                    <col class="SUN" />
+                    <col class="MON" />
+                    <col class="TUE" />
+                    <col class="WED" />
+                    <col class="THU" />
+                    <col class="FRI" />
+                    <col class="SAT" />
+                    <col class="" />
+                </colgroup>
                 <tr>
                     <td>SUN</td>
                     <td>MON</td>
