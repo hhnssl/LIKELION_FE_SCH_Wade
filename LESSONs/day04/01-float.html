@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>float</title>
+        <style>
+            figure {
+                /* display: inline-block과 같은 효과를 낼 수 있다 */
+                /* 그런데 inline-block은 margin: 0 일 때 생기는 여백들은 엔터때문이다, 해결하려면 font-size를 0으로 줄 수도 있지만 figcaption에 또 폰트사이즈를 줘야하기 때문에 비효율적 */
+                float: left;
+
+                margin: 0 10px;
+                background-color: royalblue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <figure>
+            <img src="https://via.placeholder.com/100" alt="" />
+            <figcaption>Lorem ipsum</figcaption>
+        </figure>
+        <figure>
+            <img src="https://via.placeholder.com/100" alt="" />
+            <figcaption>Lorem ipsum</figcaption>
+        </figure>
+        <figure>
+            <img src="https://via.placeholder.com/100" alt="" />
+            <figcaption>Lorem ipsum</figcaption>
+        </figure>
+    </body>
+</html>
