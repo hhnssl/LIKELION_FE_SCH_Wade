@@ -1,2 +1,5 @@
 test.html
 0.lesson_materials
+.prettierignore
+.prettierrc
+.vscode

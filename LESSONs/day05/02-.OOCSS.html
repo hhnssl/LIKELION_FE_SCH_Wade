@@ -1,0 +1,39 @@
+<!-- 1.2.2 컨테이너와 콘텐츠의 분리 -->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            /* 컨테이너에 스타일이 종속되어 있는 상태 */
+            #main .btn {
+                width: 300px;
+                padding: 20px 10px;
+                margin: 10px;
+                font-size: 18px;
+                line-height: 1.5;
+            }
+
+            #main .general {
+                background-color: aquamarine;
+                color: black;
+            }
+
+            #main .warning {
+                background-color: azure;
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <main id="main">
+            <!-- main 태그 안의 id를 없애면 종속이 사라짐. 그래서 main을 포함한 것을 하나의 객체로 만들거나,
+            위의 css에 #main을 지우고 btn.general과 같은 형식으로 독립적으로 사용한다. -->
+            <!-- 아래의 버튼들은 객체이다. -->
+            <button type="button" class="btn general">기본 버튼</button>
+            <button type="button" class="btn warning">취소 버튼</button>
+        </main>
+    </body>
+</html>

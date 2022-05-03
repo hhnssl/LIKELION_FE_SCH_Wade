@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            img {
+                /* 최대 사진의 원래 크기만큼만 커짐 */
+                max-width: 100%;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            article {
+                width: 100vw;
+                height: 100vh;
+                background-image: url("https://images.unsplash.com/photo-1617371067811-6f7535979874?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+                background-repeat: no-repeat;
+                /* contain으로 반응형 만들기. 근데 contain은 이미지 원본 자체를 완전히 다 보여주려고 해서 아래 여백이 생긴다.*/
+                background-size: contain;
+
+                /* cover는 화면을 여백없이 꽉 채우는데, 크기 변화가 없어 반응형이 되지 않는다. */
+                background-size: cover;
+                /*background-size: cover;와  background-position: center;를 같이 사용하여 가운데에 초점을 맞춘 반응형 백이 완성!  */
+                background-position: center;
+            }
+        </style>
+    </head>
+    <body>
+        <article></article>
+    </body>
+</html>
