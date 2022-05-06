@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<!-- sort() :  배열의 요소를 정렬한 후 그 배열을 반환합니다. -->
+
+<body>
+  <script>
+    var fish = ['정어리', '고등어', '돌고래', '참치', '고래상어', '코끼리'];
+
+    // 다음 배열에서 물고기가 아닌것을 slice로 선택해 콘솔로 출력해 보세요.
+    document.write(fish);
+    document.write('<br>');
+
+    document.write(fish.slice(-1));
+    document.write('<br>');
+
+    document.write(fish);
+    document.write('<br>');
+    document.write('<br>');
+
+    //splice는 원본에 영향을 끼친다. 
+    document.write(fish);
+    document.write('<br>');
+
+    document.write(fish.splice(-1));
+    document.write('<br>');
+
+    document.write(fish);
+
+
+  </script>
+</body>
+
+</html>
