@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    class Sausage {
+      constructor(item1, item2) {
+        this.item1 = item1;
+        this.item2 = item2;
+      }
+
+      taste() {
+        console.log(`${this.item1}와 ${this.item2} 맛이 난다!`);
+      }
+    }
+
+    const food = new Sausage('후추', '고춧가루');
+
+
+    /*상속받는클래스*/
+    class FireSausage extends Sausage {
+      // constructor를 생략해서, 부모의 item1,2를 그대로 받아옴!
+      taste() { // 부모 taste() 메소드와 다름! 자식이 아예 덮어씌워버렷어
+        console.log(`${this.item1}와 ${this.item2} 맛이 난다! 불맛도 난다`);
+      }
+    }
+    const fireFood = new FireSausage('딸기', '초코');
+
+  </script>
+</body>
+
+</html>

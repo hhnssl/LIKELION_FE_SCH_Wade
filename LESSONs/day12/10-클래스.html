@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Robot(name) {
+      this.name = name;
+    }
+
+    Robot.prototype.sayYourName = function () {
+      console.log(`내 이름은 ${this.name}입니당당당`);
+    }
+
+    const bot1 = new Robot('한솔'); //new 가 없으면 그냥 일반 함수가 된다~
+
+
+    // 위의 걸 클래스로 만들기
+    class RobotClass {
+      //클래스 안에서 function 키워드는 생략한다!
+      // constructor: 생성자 함수의 역할을 한다.
+      constructor(name) {
+        this.name = name;
+      }
+
+      sayYourName() {
+        console.log(`내 이름은 ${this.name}입니당당당`);
+      }
+
+    }
+    const botClass = new RobotClass('잉비');
+  </script>
+</body>
+
+</html>

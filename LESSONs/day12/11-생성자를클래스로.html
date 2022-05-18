@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    class Me {
+      constructor(name, address, phoneNum) {
+        this.name = name;
+        this.address = address;
+        this.phoneNum = phoneNum;
+      }
+
+      canRun() {
+        console.log(`${this.name}이가 달린다`);
+      }
+
+      hitting(input) {
+        input.내구도하락();
+      }
+    }
+    class Item {
+      constructor(name, 내구도) {
+        this.name = name;
+        this.내구도 = 내구도;
+      }
+
+      내구도하락() {
+        this.내구도--;
+        console.log(`현재 ${this.name}의 내구도는 ${this.내구도}입니다`);
+      }
+    }
+
+    const hansol = new Me('한솔', '성남', '이육오팔');
+    const ingbee = new Me('잉비', '성남', '영영영영');
+
+    const 샌드백 = new Item('샌드백', 100);
+    const 컴퓨터 = new Item('컴퓨터', 10);
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    class Robot {
+      constructor(name) {
+        this.name = name;
+      }
+
+      sayYourName() {
+        console.log(`ㄴㅐ 이름은 ${this.name}이다`);
+      }
+    }
+
+
+    class BabyRobot extends Robot {
+      // constructor(name) { <- 딱히 자식에서 추가할 프로퍼티가 없다면(부모걸 아예 그대로 쓴다면) constructor 생량 가능하다!!
+      //   super(name);
+      //   this.ownName = '아이크'
+      // }
+
+      sayBabyName() {
+        this.sayYourName();
+        console.log('뱌뱌 아 뱌 뱌 !');
+      }
+    }
+
+    const baby = new BabyRobot('한솔');
+  </script>
+</body>
+
+</html>

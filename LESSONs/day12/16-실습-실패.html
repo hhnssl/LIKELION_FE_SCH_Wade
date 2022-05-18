@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      간단한 투두 리스트기능 구현해보기
+      1. 해야할 일 Todo 클래스(내용, 상태 두 가지 프로퍼티를 가집니다.)
+      2. Todo 클래스는 상태를 변경하는 changeState 메서드를 가집니다. (했는지 안했는지)
+      3. 할일의 목록을 관리하는 관리자를 추상화한 TodoManager 클래스 (할일 목록을 프로퍼티로 가집니다.) (할일을 배열로 저장)
+      4. 할 일을 저장하고(addItem), 할 일의 목록을 보여주며(getItems), 할 일의 남은 갯수를 반환하는(getLeftTodoCount) 세 가지 메소드를 가집니다.
+    */
+  </script>
+</body>
+<script>
+  /* Todo 클래스*/
+  class Todo {
+    constructor(item, finished) {
+      this.item = item;
+      this.finished = finished;
+    }
+
+    changeState() {
+      if (this.finished === true) {
+        this.finished = false
+      } else { this.finished === true }
+    }
+  }
+
+  /* TodoManager 클래스 */
+  class TodoManager {
+    constructor(공간) {
+      this.공간 = 공간;
+    }
+
+    // 할 일 저장
+    addItem(item) {
+      let i = 0;
+      this.item[i] = item;
+    }
+
+    // 할 일 목록 반환
+    getItems() {
+      Todo.changeState();
+    }
+
+    // 남은 목록 개수 반환
+    getLeftTodoCount() {
+    }
+  }
+
+  const todo = new Todo('한솔이의투두리스트');
+  const todoManager = new TodoManager(공간);
+
+  todoManager.addItem('숙제하기');
+  todoManager.getItems();
+
+
+</script>
+
+</html>
