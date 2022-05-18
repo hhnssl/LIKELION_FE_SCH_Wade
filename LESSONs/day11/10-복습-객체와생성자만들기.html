@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 객체를 만들고 -> 객체를 생성자로 바꿔 보기
+    // 1. 객체 만들기
+    // 성남에 사는 한솔이 객체가 있고 한솔이 객체는 달릴 수 있고, 샌드백을 때릴 수 있다.
+    const me = {
+      name: '한솔',
+      address: '성남',
+
+      canRun: function () {
+        console.log(`${this.name}이가 달린다`);
+      },
+      hitting: function (input) {
+        // input으로 들어온 다른 객체에 영향을 끼치는 함수!
+        input.내구도하락();
+      }
+    }
+
+    const sendbag = {
+      내구도: 100,
+
+      내구도하락: function () {
+        this.내구도--;
+        console.log(`현재 샌드백의 내구도는 ${this.내구도}입니다`);
+      }
+    }
+
+    console.log(me.name); //한솔
+    console.log(me.address); // 성남
+    console.log(me.canRun); // f(){~~}
+    me.canRun(); // 한솔이가 달린다 
+
+    //주의!! 리턴값이 없으니 console.log로 undefined가 생길 수 밖에 없다..!
+    console.log(me.canRun()); // 한솔이가 달린다 (undefined 생김)
+
+
+    me.hitting(sendbag); //현재 샌드백의 내구도는 99입니다
+    me.hitting(sendbag); //현재 샌드백의 내구도는 98입니다
+    me.hitting(sendbag); //현재 샌드백의 내구도는 97입니다
+    me.hitting(sendbag); //현재 샌드백의 내구도는 96입니다
+    me.hitting(sendbag); //현재 샌드백의 내구도는 95입니다
+
+
+
+  </script>
+
+</body>
+
+</html>

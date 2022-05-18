@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="">
+    <button type="submit" class="submit">제출</button>
+  </form>
+
+  <script>
+    // 1. 캡처링(true) 이벤트가 먼저 발생하지만
+    // 2. 기본값은 버블링(false)이다.
+    // 3. 캡처링이 true 인 애들이 먼저 실행되고,
+    // 4. 둘다 캡처링이면 캡처링 시작에 가까운 document가 먼저 실행되고
+    // 5. 둘다 버블링이면 버블링 시작에 가까운 button이 먼저 실행된다.
+    const submit = document.querySelector('.submit');
+
+    // 6. 문제: 콘솔에 'clicked'만 띄우고 싶다
+    // 7. button 에 캡처링을 줘서 실행 순서를 button -> document로 바꾸고 => 땡!! 둘다 버블링 이므로 굳이 캡처링 안줘도 버튼이 먼저 실행된다.
+    // 8. button에서 전파를 끊어 document의 이벤트를 실행하지 않게 한다!
+    submit.addEventListener('click', (event) => {
+      console.log('clicked');
+      event.preventDefault(); // 얘가 submit 의 기본 속성을 죽여버리는 건가?
+      event.stopPropagation(); // 이벤트 전파를 막는다.
+    }, true); // 캡처링
+    // }); // 버블링
+    //false: 버블링 | true: 캡처링 
+    document.body.addEventListener('click', () => {
+      console.log('event still alive!');
+    }, true);
+    // });
+  </script>
+</body>
+
+</html>

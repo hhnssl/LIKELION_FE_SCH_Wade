@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <article id="app">
+    <ul class="list-item">
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/jammanbo.png" alt=""></li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true" alt="">
+      </li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mazayoung.png?raw=true" alt="">
+      </li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mobugi.png" alt=""></li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/nyaong.png" alt=""></li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/pulin.png" alt=""></li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/weirdseed.png" alt=""></li>
+    </ul>
+  </article>
+
+  <script>
+    const center = document.querySelector('.list-item');
+    const items = document.querySelectorAll('.list-item li'); //유사 배열 형태로 저장됨
+    const angle = 360 / items.length;
+    let currentAngle = 0;
+
+    // 화면을 반으로 나눠서 왼쪽 누르면 왼쪽 사진으로
+    document.addEventListener('click', (event) => {
+      // window.innerWidth: 브라우저의 가로 넓이 값
+      if (window.innerWidth / 2 < event.clientX) {
+        // 오른쪽 클릭
+        // clientX: 왼쪽으로 x 축으로 얼마만큼 이동했는지 정보가 담겨 있음 (screenX도 사용가능하지만, 모니터 기준임! 그래서 듀얼 모니터쓰면 원하는 결과가 안나올 수 있음.)
+        currentAngle = currentAngle + angle;
+      } else {
+        // 왼쪽 클릭
+        currentAngle = currentAngle - angle;
+      }
+      center.style.transform = `translate(-50%, -50%) rotateY(${currentAngle}deg)`;
+    });
+  </script>
+</body>
+
+</html>

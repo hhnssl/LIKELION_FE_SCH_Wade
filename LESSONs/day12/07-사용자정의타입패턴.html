@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 사용자 정의 타입 패턴
+    function PersonType() {
+      this.age = 35;
+    }
+
+    PersonType.prototype.getAge = function () {
+      return this.age
+    }
+
+    const person2 = new PersonType();
+    console.log(person2.getAge());
+
+
+
+    function PersonType2() {
+      let age = 25;
+
+      function innerPersonType() { }
+
+      innerPersonType.prototype.getAge = function () {
+        return age;
+      }
+
+      return innerPersonType;
+    }
+
+    const Person3 = PersonType2(); //Person3 에 innerPersonType 함수가 들어간다.
+    const person3 = new Person3(); // innerPersonType 인스턴스 함수가 들어간다.
+    console.log(person3.getAge()); // 25
+  </script>
+</body>
+
+</html>

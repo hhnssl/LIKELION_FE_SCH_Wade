@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const me = {
+      name: '오한솔',
+      address: '경기도 성남시 중원구',
+      phoneNum: '010-2658-0634',
+      canTalk: function () {
+        console.log('한솔이가 말을 한다.');
+      },
+      buyingChocolate: function (chocolate, quantity) {
+        chocolate.plus(quantity);
+      },
+    };
+
+    const chocolate = {
+      quantity: 0,
+      plus: function (quantity) {
+        this.quantity = quantity;
+        console.log(`초콜릿 ${this.quantity}개 있음`);
+      }
+    };
+
+    const icecream = {
+      quantity: 0,
+      plus: function (quantity) {
+        this.quantity = quantity;
+        console.log(`아이스크림 ${this.quantity}개 있음`);
+      }
+    };
+
+    me.canTalk();
+    me.buyingChocolate(chocolate, 10);
+    me.buyingChocolate(icecream, 5);
+  </script>
+</body>
+
+</html>

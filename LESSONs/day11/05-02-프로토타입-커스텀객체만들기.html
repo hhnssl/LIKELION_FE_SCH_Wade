@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    const foods = ['짜장면', '뽁음밥', '해장국', '치킨'];
+
+    function FoodBot(foodNames) {
+      this.menu = foodNames;
+    }
+
+    FoodBot.prototype.sayMenu = function () {
+      console.log(this.menu[Math.floor(Math.random() * this.menu.length)]);
+    }
+
+    const foodBotMark1 = new FoodBot(foods);
+    const foodBotMark2 = new FoodBot(['초콜릿', '아이스크림', '햄버거', '피자', '사탕']);
+
+    foodBotMark1.sayMenu();
+    foodBotMark2.sayMenu();
+    console.log(foodBotMark1.sayMenu === foodBotMark2.sayMenu);
+  </script>
+</body>
+
+</html>

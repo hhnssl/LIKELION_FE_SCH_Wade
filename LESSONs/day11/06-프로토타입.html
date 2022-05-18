@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // prototype은 메소드를 저장하는 공간!! for 공유
+    // prototype이 존재하는 이유:
+    // 인스턴스를 만들면 그때마다 함수도 각 인스턴스마다 생기기 때문에 메모리 비효율이 일어난다(확인은 인스턴스1.메소드 === 인스턴스2.메소드로 할 수 있다.) <- 비교할 때 괄호 붙이면 안됨
+    // 그래서 하나의 함수를 인스턴스들이 공유하는 것이다!!!
+    function NewFactory(name) {
+      this.name = name;
+    }
+
+    NewFactory.prototype.sayYourName = function () {
+      console.log(`내 이름은 ${this.name}!!!`);
+    }
+
+
+    const one = new NewFactory('하나');
+    const two = new NewFactory('둘');
+    one.sayYourName();
+    two.sayYourName();
+
+    console.log(one.sayYourName() === one.sayYourName());
+
+  </script>
+</body>
+
+</html>
