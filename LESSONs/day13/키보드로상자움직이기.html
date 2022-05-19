@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 200px;
+    }
+
+    .target {
+      width: 50px;
+      height: 50px;
+
+      background-color: pink;
+
+      /* 부드럽게 움직이기!! */
+      transition: 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='target'></div>
+
+  <script>
+    const target = document.querySelector('.target');
+    let pos = 0; // 한번 키보드 움직이면 몇픽셀 움직일지 정하는 것
+
+    document.addEventListener('keydown', move); // 키다운이 되면 함수를 실행시킬 것이다! 
+    // move() 쓰면 안되는 이유는...? 실행은 키다운이 눌렸을때 이벤트리스너가 알아서 해준다!!! 괄호를 붙이면 move()()가 돼버림
+    // 콜백함수는 함수식별자(?)만 넘겨주는 거임!! 여기서 move()를 해버리면 이 순간 바로 실행을 해버리기 때문에 불리면 실행할 수 있도록 ()를 뺀것
+
+    function move(event) {
+      // console.log(event); : 잘 작동하나 살펴보기
+      const keyName = event.key; // 콘솔에서 key의 값을 찾아본담에 그 값을 갖고 옴
+      if (keyName === 'ArrowRight') {
+        // console.log('right');
+        pos += 5 // 오른쪽화살표 키보드를 누르면 5만큼 움직이게 하려고 
+        target.style.transform = `translateX(${pos}px)`;
+      }
+      if (keyName === 'ArrowLeft') {
+        // console.log('left');
+        pos -= 5
+        target.style.transform = `translateX(${pos}px)`;
+      }
+
+    }
+  </script>
+</body>
+
+</html>

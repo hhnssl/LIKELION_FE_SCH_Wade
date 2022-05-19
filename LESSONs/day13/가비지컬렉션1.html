@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    var me = { age: 30 }
+    var you = me;
+    // {age: 30}을 참조하는 카운트 : 2
+
+
+    me = null;
+    // {age: 30}을 참조하는 카운트 : 1 (me가 해제됐으니까)
+
+    you = null;
+    // {age: 30}을 참조하는 카운트 : 0 (ypu가 해제됐으니까) ==> 가비지 컬렉션 대상이 된다.
+
+    // 그래서 가비지 컬렉터가 {age: 30}를 없애버린다.
+
+  </script>
+</body>
+
+</html>
