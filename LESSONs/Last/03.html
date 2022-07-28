@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="">
+    <input type="email">
+    <button>제출</button>
+  </form>
+
+  <script>
+    const inp = document.querySelector('input');
+    inp.setCustomValidity('암튼 문제 있음 뭔가가');
+    inp.setCustomValidity(''); //해제
+    console.log(inp.validity);
+
+    inp.addEventListener('input', () => {
+      console.log
+        (inp.validity);
+    })
+
+  </script>
+</body>
+
+</html>
